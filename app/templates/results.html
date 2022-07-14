@@ -14,24 +14,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top header-white main-nav navbar-togglable">
+<body style=text-align:center>
+     <nav class="navbar navbar-expand-lg navbar-dark fixed-top header-white main-nav navbar-togglable">
         <div class="container">
             <a class="navbar-brand" href="/#">
                 <img src="{{ url_for('static', filename='images1/ai camp logo1.svg')}}" width="55" height="55" alt="">
               </a>
             <a class="navbar-brand " href="/#">
-                <h3 class="colored-text">Emotion Detector</h3>
+                <h3 class="colored-text">DASI</h3>
             </a>
-            <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span>
             </button>
 
-            <!-- Collapse -->
+
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <!-- Links -->
-                <ul class="navbar-nav row">
+<!--                 <ul class="navbar-nav row">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle colored-text" href="#home" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Links
@@ -46,41 +45,27 @@
                                 <a class="dropdown-item " target="_blank" href="https://medium.com/@thomaschen395/how-ai-camp-prepared-me-for-the-real-world-7f2a8c28cde5">
                                     Thomas's Post
                                 </a>
+                            </div> 
                         </li>
-                        <li class="nav-item ">
-                            <a href="/#home" class="nav-link colored-text">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="/#demo" class="nav-link colored-text">
-                                Demo
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="/#meet_the_team" class="nav-link colored-text">
-                                The Team
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="/#our_work" class="nav-link colored-text">
-                                Our Work
-                            </a>
-                        </li>
-                    </ul>
+<!--                         <li class="nav-item"><a class="nav-link" href="/#services">What is DASI</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#portfolio">Results</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">The Timeline</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li> -->
+<!--                     </ul> -->
                 <ul class="ml-lg-auto list-unstyled m-0 nav-btn">
                     <li><a href="https://michaelzhang1.typeform.com/to/LWIfVW1H?typeform-source=www.ai-camp.org" target="_blank" class="btn btn-green btn-circled btn-two">Register for AI Camp</a></li>
                 </ul>
-            </div> <!-- / .navbar-collapse -->
-        </div> <!-- / .Container -->
-    </nav>
+            </div> 
+        </div> 
+    </nav> 
 
     <section id="msg-box4-2" data-rv-view="2" style="background-color: rgb(255, 255, 255); margin-top: 8rem; padding-top: 3rem; padding-bottom: 0rem;">
-            <div class="container">  
+            <div class="container" class='box'>  
         <div class="row">
                 <div class="col justify-content-center align-items-center text-center">
-                    <h3 class="section-title display-4">Recognition Results</h3>
-                    <h3 class="we-found btn-text display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
+                    <h3 class="section-title display-4">Abnormalities Detected</h3>
+                    <h3 class="we-found btn-text display-4">We found  <strong><span>{{numFractures}} Fracture(s) and {{numMRF}} Metal-Rod-Fracture(s)!</span></strong></h3>
 
                     {% if labels == 'no emotion' %}
                     <div>We missed? See why below.</div>
@@ -110,12 +95,12 @@
                     <h3 class="section-title display-4 results-title">Why do we miss sometimes?</h3>
 
                     <div class="lead">
-                        <p class="section-text results-text">Given just three weeks, we only had time to train our model with 5 emotions on about 6.7k labeled data. If we have more time, we can improve our model performance!&nbsp;</p>
+                        <p class="section-text results-text">Given just three weeks, we only had time to train our model with 2 classes on about 1.5k labeled images. If we have more time, we can improve our model performance!&nbsp;</p>
                     </div>
 
                 </div>
                 <div class="col-sm-12 col-lg-6">
-                    <img class="mbr-figure-graph" src="{{ url_for('static', filename='images/clem-5-emo-ncm-671x690.jpg')}}">
+                    <img class="mbr-figure-graph" src="{{ url_for('static', filename='assets/img/confusion_matrix7-13.png')}}">
                 </div>
             </div>
     </section>

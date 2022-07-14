@@ -1,3 +1,733 @@
-<h2>
-    The index works.
-</h2>
+ <!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>DASI Platform</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+<!--         <link href="css/styles.css" rel="stylesheet" /> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+      
+      <!-- code below is test nav bar from the results.html -->
+      <nav class="navbar navbar-expand-lg fixed-top" style="background:#404040;">
+        <div class="container">
+            <a class="navbar-brand" href="https://www.ai-camp.org/">
+                <img src="{{ url_for('static', filename='images1/ai camp logo1.svg')}}" width="55" height="55" alt="">
+              </a>
+            <a class="navbar-brand " href="#">
+                <h3 class="colored-text">DASI</h3>
+            </a>
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#services">What is DASI</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Results</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">The Timeline</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div> <!-- / .Container -->
+      </nav>
+      <!-- end ..................`.......... -->
+      <!-- 
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
+            <div class="container">
+                <a class="navbar-brand" href="https://www.ai-camp.org/"><img src="{{ url_for('static', filename='assets/img/ai-camp-logo-128x128.png')}}" alt="..." /></a> 
+
+<!--               "{{ url_for('static', filename = 'src')}}" -->
+<!--               the top bar code is somethwew around here -->
+<!--                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">What is DASI</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Results</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">The Timeline</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Golden Gorillas</div>
+                <div class="masthead-heading text-uppercase">Diagnostic aid for skeletal injuries</div>
+
+              <p style="color: ;">
+                 The Future of Biotechnology
+              </p>
+              
+              <form name="file" enctype="multipart/form-data" id="image-submit-form" method="post" class="php-email-form text-center" >
+
+              <div class="row gy-4">
+                <h3>Upload an Image to DASI</h3>
+
+                <input type="file" name="file" id="file" onchange="this.form.submit()" class="form-control w-75 mx-auto btn btn-primary">
+                <label class="form-label" for="upload-image"></label>
+
+              </div>
+            </form>
+              
+            </div>
+        </header><strong></strong>
+        <!-- Services-->
+<!--         <div class="overlay-text"> -->
+<!--             <h2 class="overlay" color: white;>What is DASI ?</h2> -->
+<!--         </div> -->
+        <section class="page-section" id="services">
+            <div class="overlay-text">
+                  <h2 class="section-heading text-uppercase" style="color: #ffd336;">What is DASI ?</h2>
+            </div> 
+            <div class="container">
+             
+             <p class="text-muted" color: white; style=text-align:center> DASI is a Machine Learning Model for detecting abnormalities in skeletal X-Rays.</p>
+              
+                <br>
+                <div class="row">
+                  <hr class="dotted" size="5" margin: 10px;>
+
+                    <div class="col-md-4">
+                      <span class="fa-stack fa-4x">
+                          <i class="fas fa-circle fa-stack-2x text-primary green-text pr-3"></i>
+                          <i class="fas fa-pencil fa-stack-1x fa-inverse"></i>
+                      </span>
+
+                      <h4 class="my-3">Goals</h4>
+                      <p class="text-muted"> 
+                        <li class="text-muted"> Helping radiologists with their jobs</li>
+                        <li class="text-muted">Speeding up the X-Ray / diagnostic process</li>
+                        <li class="text-muted">Helping educators and medical students by utilizing our product as an education aid</li>
+                      </p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-hourglass fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3"> The Process</h4>
+                        <p class="text-muted">DASI takes input from x-ray images and classes them to either fracture or metal-rod fracture* , making the process faster for Radiologist to determine where the skeletal abnormality is.</p>
+                      <br>
+                      <br>
+
+                      <p class="text-muted">
+                      </p>
+
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-bullseye fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Accuracy & Error</h4>
+                        <p class="text-muted">
+                      Our model can accurately detect various types of fractures in bones. It's not accurate enough to be relied on, but it can be used as an aid in diagnostics. <br>
+                      </p>
+                    </div>
+                </div>
+<!--               <div class='row'>
+                <img src="{{ url_for('static', filename='assets/img/confusion_matrix7-13.png')}}
+"alt="Confusion matrix" padding-right: 5; margin: 5; class="img-fluid">
+              </div> -->
+          </div>
+        </section >
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+          <div class="overlay-text">
+                    <h2 class="section-heading text-uppercase" style="color: black;">Results</h2>
+          </div>
+            <div class="container">
+              <p class="text-muted" style=text-align:center>Our model results</p>
+              <hr class="dotted" size="5" margin: 10px;>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+<!--                                 <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div> -->
+                                <img class="img-fluid" src="{{ url_for('static', filename='assets/img/portfolio/b83847d2-5624-4799-9f99-4407075141a3.jfif')}}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Metal-Rod-Fracture</div>
+                                <div class="portfolio-caption-subheading text-muted">Class: 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                           <!--     <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div> -->
+                                <img class="img-fluid" src="{{ url_for('static', filename='assets/img/portfolio/7ac38753-a793-478f-ade4-10848e1a64ff.jfif')}}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Metal-Rod-Fracture</div>
+                                <div class="portfolio-caption-subheading text-muted">Class: 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+<!--                                 <div class="portfolio-hover">
+                                    
+                                </div> -->
+                                
+                               <img class="img-fluid" src="{{ url_for('static', filename='assets/img/MRFImg1.png')}}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Metal-Rod-Fracture</div>
+                                <div class="portfolio-caption-subheading text-muted">Class: 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+<!--                                 <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div> -->
+                             
+                                <img class="img-fluid" src="{{ url_for('static', filename='assets/img/FractureImg3.png')}}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Fracture</div>
+                                <div class="portfolio-caption-subheading text-muted">Class: 0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+<!--                                 <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div> -->
+                                <img class="img-fluid" src="{{ url_for('static', filename='assets/img/FractureImg2.png')}}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Fracture</div>
+                                <div class="portfolio-caption-subheading text-muted">Class: 0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+<!--                                 <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div> -->
+                                <img class="img-fluid" src="{{ url_for('static', filename='assets/img/FractureImg1.png')}}"   alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Fracture</div>
+                                <div class="portfolio-caption-subheading text-muted">Class: 0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+          <div class="overlay-text">
+                    <h2 class="section-heading text-uppercase" style="color: #ffd336;">The timeline</h2>
+                  
+                    
+                </div>
+            <div class="container">
+                
+              <p class="text-muted" style=text-align:center>Our Journey and Challenges <br> 6/27/22 - 7/15/22</p>
+              <hr class="dotted" size="5" margin: 10px;>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='assets/img/Data.jpeg')}}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Week 1 </h4>
+                                <h4 class="subheading">Data Collection</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">We collected data of bone fractures and metal-rod fractures* using webscraping tools and datasets found online. <br>Data was scarce, so we only managed to get around 400 images. We managed to triple our dataset to over 1200 imaged through Data Augumentation.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='assets/img/about/2.jpg')}}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Week 2</h4>
+                                <h4 class="subheading">Annotating and Training</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">With the data that we have annotated, we put the annotated data to their right class, making it supervised learning. After we finished annotating all the data, we Augment it to have a better model. </p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='assets/img/about/3.jpg')}}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Week 3</h4>
+                                <h4 class="portfolio-caption-heading">Website Development</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Created a website to show our model to the world, using html, css, and flask. Learning about the front-end and back-end. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='assets/img/about/AI camp.png')}}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4></h4>
+                                <h4 class="subheading">AI Camp</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">With AI Camp we learn a lot about AI, Machine learning, and deep learning. It help us improve our knowledge based around technology, how to collect, annotate, and train data, building websites with front-end and back-end. AI Camp helps students with communication and teamwork skills. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4 style="color:white;">
+                                 MAKE
+                                <br />
+                                 YOUR
+                                <br />
+                                FUTURE
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+          <div class="overlay-text">
+                    <h2 class="section-heading text-uppercase" style="color: black;">Our Amazing Team</h2>
+          </div>
+            <div class="container">
+              <p class="text-muted" style=text-align:center>The Golden Gorillas</p>
+              <hr class="dotted" size="5" margin: 10px;>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle"
+                             src="{{ url_for('static', filename = 'assets/img/Chandna_Dhruv_Image.jpg')}}" alt="..." width="200" height="300" />
+                            <h4>Dhruv Chandna</h4>
+                            <p class="text-muted">Data Scientist/ML Engineer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://mail.google.com/mail/u/0/#search/dhruvjwc%40gmail.com" aria-label="Parveen Anand Twitter Profile"><i class="fas fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/67GtqSru" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-discord"></i></a>
+                        <!--    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename = 'assets/img/Screenshot 2022-07-13 210021.png')}}" alt="..." />
+                            <h4>Felix Sohn</h4>
+                            <p class="text-muted">AI CAMP STUDENT</p>
+                            <a href="https://mail.google.com/mail/u/0/#search/felixsohn11%40gmail.com" class="btn btn-dark btn-social mx-2"  aria-label="Diana Petersen Twitter Profile"><i class="fas fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/67GtqSru" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-discord"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename = 'assets/img/Lilita.jpg')}}" alt="..." />
+                            <h4>Lalita Narayanan</h4>
+                            <p class="text-muted">AI CAMP STUDENT</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://mail.google.com/mail/u/0/#search/lalitan1809%40gmail.com" aria-label="Larry Parker Twitter Profile"><i class="fas fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/67GtqSru" aria-label="Larry Parker Facebook Profile"><i class="fab fa-discord"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+<!--                 <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"></p></div>
+                </div>
+            </div> -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle"
+                                 src="{{ url_for('static', filename='assets/img/Sammith2.0.jpg')}}" alt="..." width="200" height="300" />
+                            <h4>Sammith Krishna</h4>
+                            <p class="text-muted">AI CAMP STUDENT/Front End Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://mail.google.com/mail/u/0/#search/sammithkrishna%40gmail.com" aria-label="Sammith Krishna Gmail Profile"><i class="fas fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/67GtqSru" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-discord"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename = 'assets/img/Screenshot 2022-07-13 210021.png')}}" alt="..." />
+                            <h4>Ray Tang</h4>
+                            <p class="text-muted">Frontend Web Development, Data Processing Manager, AI Camp Student & Semi-Professional Procrasinator</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://mail.google.com/mail/u/0/#search/raytang11792%40gmail.com" aria-label="Diana Petersen Twitter Profile"><i class="fas fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/67GtqSru" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-discord"></i></a>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename ='assets/img/Darell.png')}}" alt="..." />
+                            <h4>Darell Lien</h4>
+                            <p class="text-muted">AI CAMP STUDENT</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://mail.google.com/mail/u/0/#search/darelllien2017%40gmail.com" aria-label="Larry Parker Twitter Profile"><i class="fas fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/67GtqSru" aria-label="Larry Parker Facebook Profile"><i class="fab fa-discord"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Instructor</p></div>
+                </div>
+            </div>
+         <div class="col-lg-15">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename = 'assets/img/team/3.jpg')}}" alt="..." id="Margin-center" />
+                            <h4>Ryan Qin</h4>
+                            <p class="text-muted">Best instructor ever :DDD </p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://mail.google.com/mail/u/0/#search/ryanqin10%40gmail.com" aria-label="Diana Petersen Twitter Profile"><i class="fas fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/67GtqSru" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-discord"></i></a>
+                            
+                        </div>
+                    </div>
+        </section>
+        <!-- Clients-->
+        <div class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="https://pytorch.org/"><img class="img-fluid img-brand d-block mx-auto" src="{{ url_for('static', filename='assets/img/logos/pytorch-logo-dark.png')}}" alt="..." aria-label="Pytorch Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="https://discord.com/"><img class="img-fluid img-brand d-block mx-auto" src="{{ url_for('static', filename='assets/img/logos/17-179788_discord-logo-01-discord-logo-png.png')}}" alt="..." aria-label="Discord Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="https://cocalc.com/"><img class="img-fluid img-brand d-block mx-auto" src="{{ url_for('static', filename = 'assets/img/logos/cocalc-transparent-logo-192x192.png')}}" alt="..." aria-label="Cocalc Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="https://www.python.org/"><img class="img-fluid img-brand d-block mx-auto" src="{{ url_for('static', filename='assets/img/logos/Python_logo.webp')}}" alt="..." aria-label="Python Logo" /></a>
+                    
+                    </div>
+                  
+                  <div class="col-md-3 col-sm-6 my-3">
+                        <a href="https://www.w3schools.com/html/html_css.asp"><img class="img-fluid img-brand d-block mx-auto" src="{{ url_for('static', filename='assets/img/CSS3_and_HTML5_logos_and_wordmarks.svg.png')}}""" alt="..." aria-label="css and html Logo"  width="100" height="220" /></a>
+                    </div>
+                  <div class="col-md-3 col-sm-6 my-3">
+                        <a href="https://roboflow.com/"><img class="img-fluid img-brand d-block mx-auto" src="{{ url_for('static', filename='assets/img/roboflow_logo_high_res.png')}}" alt="..." aria-label="roboflow Logo" width:400; height:auto;/></a>
+                    </div                </div>
+            </div>
+        </div>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+<!--                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                   <div class="col-lg-4 text-lg-start">&copy;AI CAMP</div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{{ url_for('static', filename='assets/img/assets/img/close-icon.svg')}}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Threads
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Class 1
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Explore
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Graphic Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/fractured-legs-x-ray23_j…e4cdb2528f3267f14afe7 (1).jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Metal-Rod-Fracture
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Class: 1
+                                        </li>
+                                    </ul>
+                               <!--     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Lines
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Branding
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Southwest
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Website Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Window
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Photography
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

@@ -23,7 +23,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 32 * 1024 * 1024
 
-model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best.pt', force_reload=True)
+model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best7-13.pt', force_reload=True)
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -50,7 +50,7 @@ def home():
             return redirect(url_for('uploaded_file',
                                     filename=filename))
 
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 @app.route(f'{base_url}/uploads/<filename>')
@@ -81,15 +81,32 @@ def uploaded_file(filename):
         for percent in confidences:
             format_confidences.append(str(round(percent*100)) + '%')
         format_confidences = and_syntax(format_confidences)
-
+        numFractures = 0
+        numMRF = 0
+        
         labels = list(results.pandas().xyxy[0]['name'])
+        
+        for label in labels:
+            if(label == "0"):
+                numFractures+=1
+            elif(label == "1"):
+                numMRF+=1
         # labels: sorting and capitalizing, putting into function
         labels = set(labels)
+        newLabels = set()
+
+        for label in labels:
+            print(label)
+            if(label == "0"):
+                newLabels.add("Fracture(0)")
+            elif(label == "1"):
+                newLabels.add("Metal-Rod-Fracture(1)")
+        labels = newLabels 
         labels = [emotion.capitalize() for emotion in labels]
         labels = and_syntax(labels)
         return render_template('results.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
-                               filename=filename)
+                               filename=filename, numFractures=numFractures, numMRF=numMRF)
     else:
         found = False
         return render_template('results.html', labels='No Emotion', old_filename=filename, filename=filename)
@@ -107,7 +124,7 @@ def files(filename):
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'url'
+    website_url = 'cocalc20.ai-camp.dev'
     
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host = '0.0.0.0', port=port, debug=True)

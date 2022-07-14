@@ -28,7 +28,7 @@ Version      : 1.0
 * ----------------------------------------
 */
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,700,900");
-html {
+html 
 	font-family: sans-serif;
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
