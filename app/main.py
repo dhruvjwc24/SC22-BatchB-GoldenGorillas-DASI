@@ -104,11 +104,15 @@ def uploaded_file(filename):
         labels = newLabels 
         labels = [emotion.capitalize() for emotion in labels]
         labels = and_syntax(labels)
+        if (filename[-4:] == "jpeg"):
+            filename = filename[:-4] + "jpg"
         return render_template('results.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
                                filename=filename, numFractures=numFractures, numMRF=numMRF)
     else:
         found = False
+        if (filename[-4:] == "jpeg"):
+            filename = filename[:-4] + "jpg"
         return render_template('results.html', labels='No Emotion', old_filename=filename, filename=filename)
 
 
@@ -124,7 +128,7 @@ def files(filename):
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'cocalc20.ai-camp.dev'
+    website_url = 'localhost'
     
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host = '0.0.0.0', port=port, debug=True)
