@@ -4,11 +4,14 @@ First clone this repository through
 
 `git clone https://github.com/organization-x/omni`
 
-cd into the `/app` folder & type in terminal
+cd into the app folder 
+`cd SC22-BatchB-GoldenGorillas-DASI/app` 
+
+Install required dependencies
 
 `python3 -m pip install -r requirements.txt`
 
-Run (in terminal)
+Run main file
 
  `python3 -m main`
 
