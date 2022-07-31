@@ -4,7 +4,8 @@ First clone this repository through
 
 `git clone https://github.com/organization-x/omni`
 
-cd into the app folder 
+Change directory into the app folder 
+
 `cd SC22-BatchB-GoldenGorillas-DASI/app` 
 
 Install required dependencies
